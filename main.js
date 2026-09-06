@@ -74,7 +74,7 @@ function closeOtherApps() {
       'lsass.exe',
       'svchost.exe',
       'ctfmon.exe',
-      'hiragana dojo app.exe'
+      'Japanese Boost Dojo App.exe'
     ];
 
     const protectedFilter = protectedNames
@@ -223,7 +223,7 @@ function createWindow() {
 
   mainWindow = new BrowserWindow({
 
-    title: 'Hiragana Dojo App',
+    title: 'Japanese Boost Dojo App',
 
     // ========================================================
     // FULLSCREEN
@@ -439,7 +439,7 @@ app.whenReady().then(async () => {
       'Please close all other applications before continuing.',
 
     detail:
-      'Hiragana Dojo App runs in a locked, full-screen mode. ' +
+      'Japanese Boost Dojo App runs in a locked, full-screen mode. ' +
       'Clicking Continue will close other open applications automatically.',
 
     buttons: [
@@ -487,7 +487,7 @@ autoUpdater.on('update-downloaded', () => {
     title: 'Update Ready',
 
     message:
-      'A new version of Hiragana Dojo is ready. Restart now to apply?',
+      'A new version of Japanese Boost Dojo App is ready. Restart now to apply?',
 
     buttons: [
       'Restart',

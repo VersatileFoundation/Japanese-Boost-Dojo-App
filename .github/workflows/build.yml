@@ -1,4 +1,4 @@
-name: Build Hiragana Dojo App
+name: Build Japanese Boost Dojo App
 
 on:
   push:
@@ -65,7 +65,7 @@ jobs:
 
         run: |
 
-          npx electron-packager . "Hiragana Dojo App" `
+          npx electron-packager . "Japanese Boost Dojo App" `
             --platform=win32 `
             --arch=x64 `
             --electron-version=32.0.0 `
@@ -73,9 +73,9 @@ jobs:
             --overwrite `
             --icon=icon.ico `
             --win32metadata.CompanyName="Versatile Foundation" `
-            --win32metadata.FileDescription="Hiragana Dojo Practice Kiosk App" `
-            --win32metadata.OriginalFilename="Hiragana Dojo App.exe" `
-            --win32metadata.ProductName="Hiragana Dojo App" `
+            --win32metadata.FileDescription="Japanese Boost Dojo Practice Desktop App" `
+            --win32metadata.OriginalFilename="Japanese Boost Dojo App.exe" `
+            --win32metadata.ProductName="Japanese Boost Dojo App" `
             --win32metadata.requested-execution-level="asInvoker"
 
 
@@ -90,7 +90,7 @@ jobs:
         run: |
 
           $exe =
-            "Hiragana Dojo App-win32-x64\Hiragana Dojo App.exe"
+            "Japanese Boost Dojo App-win32-x64\Japanese Boost Dojo App.exe"
 
           if (!(Test-Path $exe)) {
 
@@ -118,16 +118,16 @@ jobs:
 
         run: |
 
-          if (Test-Path "HiraganaDojoApp_Portable.zip") {
+          if (Test-Path "japaneseboostdojoapp_Portable.zip") {
 
             Remove-Item `
-              "HiraganaDojoApp_Portable.zip" `
+              "japaneseboostdojoapp_Portable.zip" `
               -Force
           }
 
           Compress-Archive `
-            -Path "Hiragana Dojo App-win32-x64\*" `
-            -DestinationPath "HiraganaDojoApp_Portable.zip" `
+            -Path "Japanese Boost Dojo App-win32-x64\*" `
+            -DestinationPath "japaneseboostdojoapp_Portable.zip" `
             -CompressionLevel Optimal `
             -Force
 
@@ -192,7 +192,7 @@ jobs:
         run: |
 
           $installer =
-            "installer\hiraganadojoapp-installer.exe"
+            "installer\japaneseboostdojoapp-installer.exe"
 
           if (!(Test-Path $installer)) {
 
@@ -220,9 +220,9 @@ jobs:
 
         with:
 
-          name: Hiragana-Dojo-Windows-Portable
+          name: Japanese-Boost-Dojo-App-Windows-Portable
 
-          path: HiraganaDojoApp_Portable.zip
+          path: JapaneseBoostDojoApp_Portable.zip
 
 
       # --------------------------------------------------------
@@ -235,9 +235,9 @@ jobs:
 
         with:
 
-          name: Hiragana-Dojo-Windows-Installer
+          name: Japanese-Boost-Dojo-App-Windows-Installer
 
-          path: installer/hiraganadojoapp-installer.exe
+          path: installer/Japanese-Boost-Dojo-App-installer.exe
 
 
   # ============================================================
@@ -291,7 +291,7 @@ jobs:
 
         run: |
 
-          npx electron-packager . "Hiragana Dojo App" \
+          npx electron-packager . "Japanese Boost Dojo App" \
             --platform=darwin \
             --arch=universal \
             --electron-version=32.0.0 \
@@ -309,7 +309,7 @@ jobs:
         run: |
 
           if [ ! -d \
-            "Hiragana Dojo App-darwin-universal/Hiragana Dojo App.app"
+            "Japanese Boost Dojo App-darwin-universal/Japanese Boost Dojo App.app"
           ]; then
 
             echo "macOS application was not created."
@@ -332,8 +332,8 @@ jobs:
             -k \
             --sequesterRsrc \
             --keepParent \
-            "Hiragana Dojo App-darwin-universal/Hiragana Dojo App.app" \
-            "HiraganaDojoApp_Mac.zip"
+            "Japanese Boost Dojo App-darwin-universal/Japanese Boost Dojo App.app" \
+            "JapaneseBoostDojoApp_Mac.zip"
 
 
       # --------------------------------------------------------
@@ -346,9 +346,9 @@ jobs:
 
         with:
 
-          name: Hiragana-Dojo-macOS
+          name: Japanese-Boost-Dojo-App-macOS
 
-          path: HiraganaDojoApp_Mac.zip
+          path: japaneseboostdojoapp_Mac.zip
 
 
   # ============================================================
@@ -377,7 +377,7 @@ jobs:
 
         with:
 
-          name: Hiragana-Dojo-Windows-Portable
+          name: japaneseboostdojoapp-Windows-Portable
 
           path: release/windows-portable
 
@@ -392,7 +392,7 @@ jobs:
 
         with:
 
-          name: Hiragana-Dojo-Windows-Installer
+          name: japaneseboostdojoapp-Windows-Installer
 
           path: release/windows-installer
 
@@ -407,7 +407,7 @@ jobs:
 
         with:
 
-          name: Hiragana-Dojo-macOS
+          name: japaneseboostdojoapp-macOS
 
           path: release/macos
 
@@ -435,7 +435,7 @@ jobs:
 
           tag_name: v${{ github.run_number }}
 
-          name: Hiragana Dojo App v${{ github.run_number }}
+          name: Japanese Boost Dojo App v${{ github.run_number }}
 
           generate_release_notes: true
 
