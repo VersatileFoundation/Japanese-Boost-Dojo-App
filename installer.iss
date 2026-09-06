@@ -1,8 +1,8 @@
-#define MyAppName "Hiragana Dojo App"
+#define MyAppName "Japanese Boost Dojo App"
 #define MyAppVersion "1.0"
 #define MyAppPublisher "Versatile Foundation"
 #define MyAppURL "https://hiragana-practice.replit.app/"
-#define MyAppExeName "Hiragana Dojo App.exe"
+#define MyAppExeName "Japanese Boost Dojo App.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".myp"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
@@ -31,7 +31,7 @@ SolidCompression=yes
 WizardStyle=modern windows11
 ; Cloud compiling
 OutputDir={#SourcePath}\installer
-OutputBaseFilename=hiraganadojoapp-installer
+OutputBaseFilename=japaneseboostdojoapp-installer
 SetupIconFile={#SourcePath}\icon.ico
 
 [Languages]
@@ -45,7 +45,7 @@ Name: "desktopicon"; \
     Flags: unchecked
 
 [Files]
-Source: "{#SourcePath}\Hiragana Dojo App-win32-x64\*"; \
+Source: "{#SourcePath}\Japanese Boost Dojo App-win32-x64\*"; \
     DestDir: "{app}"; \
     Flags: ignoreversion recursesubdirs createallsubdirs
 
